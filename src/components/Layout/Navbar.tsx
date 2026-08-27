@@ -156,29 +156,42 @@ export function Navbar({
 
   return (
     <>
-      <header
+      {/* <header
        className="border-b"
-      >
+      > */}
+      <header className="border-b bg-slate-950 text-white">
         <div className="container mx-auto px-2 sm:px-4">
-          <div className="flex h-14 sm:h-16 items-center justify-between gap-2 sm:gap-2">
+          <div 
+          className="flex h-14 sm:h-16 items-center justify-between gap-2 sm:gap-2"
+
+          
+          >
             {/* Logo */}
             <Link
               href="/"
               className="flex items-center space-x-2 flex-shrink-0"
             >
-              <div className="h-7 sm:h-8 w-7 sm:w-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-md">
+              {/* <div className="h-7 sm:h-8 w-7 sm:w-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-md">
                 <span className="text-primary-foreground font-bold text-base sm:text-lg">
-                  D
+                 T
                 </span>
-              </div>
+              </div> */}
+              <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+  <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight">
+    T
+  </span>
+</div>
               <span
                 className={`font-bold text-lg sm:text-xl hidden lg:flex ${
+                  // isScrolled
+                  //   ? "bg-gradient-to-r from-white to-accent"
+                  //   : "bg-gradient-to-r from-primary to-accent"
                   isScrolled
-                    ? "bg-gradient-to-r from-white to-accent"
-                    : "bg-gradient-to-r from-primary to-accent"
+  ? "bg-gradient-to-r from-blue-400 to-purple-400"
+  : "bg-gradient-to-r from-blue-400 to-purple-400"
                 } bg-clip-text text-transparent`}
               >
-                DeviceMart
+              TechMart
               </span>
             </Link>
 

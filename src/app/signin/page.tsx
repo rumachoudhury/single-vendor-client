@@ -90,7 +90,7 @@ export default function SignInPage() {
             <span className="text-primary-foreground font-bold text-lg">D</span>
           </div>
           <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            DeviceMart
+           TechMart
           </span>
         </Link>
         <div className="flex items-center space-x-4">
