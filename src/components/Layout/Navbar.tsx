@@ -45,6 +45,7 @@ import { useGetAllProductsQuery } from "@/redux/api/product/productApi";
 import { useGetUserProfileQuery } from "@/redux/api/user/userApi";
 import { IProduct } from "@/types";
 import { ModeToggle } from "../ModeToggle/ModeToggle";
+import Image from "next/image";
 
 export function Navbar({
   onCartClick,
@@ -161,11 +162,7 @@ export function Navbar({
       > */}
       <header className="border-b bg-slate-950 text-white">
         <div className="container mx-auto px-2 sm:px-4">
-          <div 
-          className="flex h-14 sm:h-16 items-center justify-between gap-2 sm:gap-2"
-
-          
-          >
+          <div className="flex h-14 sm:h-16 items-center justify-between gap-2 sm:gap-2">
             {/* Logo */}
             <Link
               href="/"
@@ -176,37 +173,56 @@ export function Navbar({
                  T
                 </span>
               </div> */}
-              <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
-  <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight">
-    T
-  </span>
-</div>
+              {/* <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+                <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight">
+                  T
+                </span>
+              </div> */}
+
+              <Image
+                src="/T.svg"
+                alt="TechMart"
+                width={40}
+                height={40}
+                className="h-9 w-9"
+              />
               <span
                 className={`font-bold text-lg sm:text-xl hidden lg:flex ${
                   // isScrolled
                   //   ? "bg-gradient-to-r from-white to-accent"
                   //   : "bg-gradient-to-r from-primary to-accent"
                   isScrolled
-  ? "bg-gradient-to-r from-blue-400 to-purple-400"
-  : "bg-gradient-to-r from-blue-400 to-purple-400"
+                    ? "bg-gradient-to-r from-blue-400 to-purple-400"
+                    : "bg-gradient-to-r from-blue-400 to-purple-400"
                 } bg-clip-text text-transparent`}
               >
-              TechMart
+                TechMart
               </span>
             </Link>
 
             {/* Mobile Search */}
             <div className=" flex md:hidden lg:hidden w-full">
               <form onSubmit={handleSearch} className="relative w-full">
-                <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                <Input
+                {/* <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> */}
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-blue-500" />
+                {/* <Input
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
                   onFocus={() => setIsFocused(true)}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-8 pr-3 h-8 text-xs bg-muted/50 border-muted-foreground/20 min-w-[230px] w-full max-w-full"
+                /> */}
+                <Input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsFocused(true)}
+                  // className="h-10 w-full rounded-lg border border-slate-300 bg-white pl-10 pr-4 text-sm font-medium text-slate-600 shadow-sm placeholder:text-slate-400 transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+                  className="h-10 w-full rounded-lg border-2 border-slate-300 bg-white pl-10 pr-4 text-sm font-medium text-slate-900 shadow-md placeholder:text-slate-600 transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
                 />
+
                 {isFocused && debouncedTerm && (
                   <div className="absolute top-full mt-2 w-full bg-background border rounded-md shadow-lg z-[1000] max-h-80 overflow-y-auto pointer-events-auto">
                     {isLoading ? (
@@ -330,7 +346,9 @@ export function Navbar({
                 onClick={handleWishlistClick}
               >
                 <Heart className="h-4 sm:h-5 w-4 sm:w-5 transition-colors group-hover:text-primary" />
-                <span className="absolute -top-1 -right-1 h-3 sm:h-4 w-3 sm:w-4 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-[0.6rem] sm:text-xs flex items-center justify-center shadow-md">
+                {/* <Heart className="h-4 sm:h-5 w-4 sm:w-5 text-pink-500 transition-colors group-hover:text-pink-600" /> */}
+                {/* <span className="absolute -top-1 -right-1 h-3 sm:h-4 w-3 sm:w-4 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-[0.6rem] sm:text-xs flex items-center justify-center shadow-md"> */}
+                <span className="absolute -top-1 -right-1 h-3 sm:h-4 w-3 sm:w-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-[0.6rem] sm:text-xs font-semibold flex items-center justify-center shadow-md shadow-purple-500/30">
                   {user?.role === "ADMIN" ? (
                     0
                   ) : (
@@ -348,8 +366,10 @@ export function Navbar({
                 className="relative group p-1 sm:p-2 hidden lg:flex"
                 onClick={handleCartClick}
               >
-                <ShoppingCart className="h-4 sm:h-5 w-4 sm:w-5 transition-colors group-hover:text-primary" />
-                <span className="absolute -top-1 -right-1 h-3 sm:h-4 w-3 sm:w-4 rounded-full bg-gradient-to-r from-accent to-accent/80 text-accent-foreground text-[0.6rem] sm:text-xs flex items-center justify-center shadow-md">
+                {/* <ShoppingCart className="h-4 sm:h-5 w-4 sm:w-5 transition-colors group-hover:text-primary" /> */}
+                <ShoppingCart className="h-4 sm:h-5 w-4 sm:w-5 text-blue-500 transition-colors group-hover:text-purple-600" />
+                {/* <span className="absolute -top-1 -right-1 h-3 sm:h-4 w-3 sm:w-4 rounded-full bg-gradient-to-r from-accent to-accent/80 text-accent-foreground text-[0.6rem] sm:text-xs flex items-center justify-center shadow-md"> */}
+                <span className="absolute -top-1 -right-1 h-3 sm:h-4 w-3 sm:w-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-[0.6rem] sm:text-xs font-semibold flex items-center justify-center shadow-md shadow-purple-500/30">
                   {user?.role === "ADMIN" ? (
                     0
                   ) : (
