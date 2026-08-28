@@ -215,7 +215,7 @@ export function AboutSection() {
 
           {/* Right Content - Features */}
           <div className="lg:col-span-1 space-y-4 animate-in slide-in-from-right-10 duration-1000 delay-700">
-            <h3 className="text-xl font-semibold mb-4 text-center lg:text-left">
+            <h3 className="text-xl font-bold mb-4 text-center lg:text-left">
               {/* Why Choose Us? */}
                 Why Shop With TechMart?
             </h3>

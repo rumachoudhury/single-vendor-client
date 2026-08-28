@@ -4,48 +4,95 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Truck, Shield, Headphones, RotateCcw, CreditCard, Gift } from "lucide-react"
 
+// const services = [
+//   {
+//     icon: Truck,
+//     title: "Free Shipping",
+//     description: "Free shipping on all orders over $50. Fast and reliable delivery worldwide.",
+//     color: "text-blue-600 dark:text-blue-400",
+//   },
+//   {
+//     icon: Shield,
+//     title: "Secure Payment",
+//     description: "Your payment information is encrypted and secure with our SSL protection.",
+//     color: "text-green-600 dark:text-green-400",
+//   },
+//   {
+//     icon: Headphones,
+//     title: "24/7 Support",
+//     description: "Our customer support team is available 24/7 to help you with any questions.",
+//     color: "text-purple-600 dark:text-purple-400",
+//   },
+//   {
+//     icon: RotateCcw,
+//     title: "Easy Returns",
+//     description: "Not satisfied? Return your purchase within 30 days for a full refund.",
+//     color: "text-orange-600 dark:text-orange-400",
+//   },
+//   {
+//     icon: CreditCard,
+//     title: "Multiple Payment",
+//     description: "We accept all major credit cards, PayPal, and other secure payment methods.",
+//     color: "text-red-600 dark:text-red-400",
+//   },
+//   {
+//     icon: Gift,
+//     title: "Gift Cards",
+//     description: "Perfect for any occasion. Give the gift of choice with our gift cards.",
+//     color: "text-pink-600 dark:text-pink-400",
+//   },
+// ]
+
+
 const services = [
   {
     icon: Truck,
-    title: "Free Shipping",
-    description: "Free shipping on all orders over $50. Fast and reliable delivery worldwide.",
-    color: "text-blue-600 dark:text-blue-400",
+    title: "Fast Delivery",
+    description:
+      "Get your orders delivered quickly and reliably with convenient shipping options.",
+    color: "text-blue-400",
   },
   {
     icon: Shield,
-    title: "Secure Payment",
-    description: "Your payment information is encrypted and secure with our SSL protection.",
-    color: "text-green-600 dark:text-green-400",
+    title: "Secure Shopping",
+    description:
+      "Shop with confidence knowing your personal and payment information is protected.",
+    color: "text-purple-400",
   },
   {
     icon: Headphones,
-    title: "24/7 Support",
-    description: "Our customer support team is available 24/7 to help you with any questions.",
-    color: "text-purple-600 dark:text-purple-400",
+    title: "Customer Support",
+    description:
+      "Our support team is here to help with your questions, orders, and shopping needs.",
+    color: "text-cyan-400",
   },
   {
     icon: RotateCcw,
     title: "Easy Returns",
-    description: "Not satisfied? Return your purchase within 30 days for a full refund.",
-    color: "text-orange-600 dark:text-orange-400",
+    description:
+      "Changed your mind? Enjoy a simple return process on eligible products.",
+    color: "text-indigo-400",
   },
   {
     icon: CreditCard,
-    title: "Multiple Payment",
-    description: "We accept all major credit cards, PayPal, and other secure payment methods.",
-    color: "text-red-600 dark:text-red-400",
+    title: "Flexible Payments",
+    description:
+      "Choose from convenient and secure payment options when completing your purchase.",
+    color: "text-violet-400",
   },
   {
     icon: Gift,
-    title: "Gift Cards",
-    description: "Perfect for any occasion. Give the gift of choice with our gift cards.",
-    color: "text-pink-600 dark:text-pink-400",
+    title: "Special Offers",
+    description:
+      "Discover exclusive deals, seasonal promotions, and exciting offers throughout the year.",
+    color: "text-blue-300",
   },
-]
+];
 
 export function ServicesSection() {
   return (
-    <section className="py-6">
+    // <section className="py-6">
+    <section className="py-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-8 animate-in slide-in-from-bottom-10 duration-1000">
