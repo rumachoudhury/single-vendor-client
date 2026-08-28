@@ -76,7 +76,6 @@ import { TrendingUp, Users, Package, Star } from "lucide-react";
 //   },
 // ];
 
-
 const stats = [
   {
     icon: Users,
@@ -255,22 +254,21 @@ export function StatsSection() {
             Our success measured by customer satisfaction and service quality
           </p> */}
 
-<Badge
-  variant="secondary"
-  className="mb-3 bg-white/10 text-white border-white/30"
->
-  TechMart By The Numbers
-</Badge>
+          <Badge
+            variant="secondary"
+            className="mb-3 bg-white/10 text-white border-white/30"
+          >
+            TechMart By The Numbers
+          </Badge>
 
-<h2 className="text-2xl md:text-3xl font-bold mb-2">
-  Trusted by Thousands
-</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">
+            Trusted by Thousands
+          </h2>
 
-<p className="text-sm text-white/80 max-w-xl mx-auto">
-  Real numbers from our growing community of customers and successful
-  orders.
-</p>
-
+          <p className="text-sm text-white/80 max-w-xl mx-auto">
+            Real numbers from our growing community of customers and successful
+            orders.
+          </p>
 
           {/* <Badge
             variant="secondary"
@@ -287,7 +285,6 @@ export function StatsSection() {
             Real numbers from our growing community of customers and successful
             orders.
           </p> */}
-          
         </div>
 
         {/* Compact Stats Grid */}
@@ -333,49 +330,47 @@ export function StatsSection() {
           ))}
         </div> */}
 
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-  {stats.map((stat, index) => (
-    <div
-      key={index}
-      className="text-center group animate-in slide-in-from-bottom-10 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 border border-white/20"
-      style={{ animationDelay: `${index * 150}ms` }}
-    >
-      {/* Icon */}
-      <div className="mb-4">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-          <stat.icon className={`h-6 w-6 ${stat.color}`} />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="text-center group animate-in slide-in-from-bottom-10 bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 border border-white/20"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              {/* Icon */}
+              <div className="mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 border border-white/20 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
+                  <stat.icon className={`h-6 w-6 ${stat.color}`} />
+                </div>
+              </div>
+
+              {/* Counter */}
+              <div className="text-3xl md:text-4xl font-bold mb-2 group-hover:scale-105 transition-transform duration-300">
+                <Counter
+                  end={stat.value}
+                  isDecimal={stat.isDecimal}
+                  suffix={stat.suffix}
+                  isVisible={isVisible}
+                  duration={1500}
+                  delay={index * 200}
+                />
+              </div>
+
+              {/* Label */}
+              <div className="text-lg font-semibold mb-1">{stat.label}</div>
+
+              {/* Description */}
+              <div className="text-xs text-white/70 leading-tight">
+                {stat.description}
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      {/* Counter */}
-      <div className="text-3xl md:text-4xl font-bold mb-2 group-hover:scale-105 transition-transform duration-300">
-        <Counter
-          end={stat.value}
-          isDecimal={stat.isDecimal}
-          suffix={stat.suffix}
-          isVisible={isVisible}
-          duration={1500}
-          delay={index * 200}
-        />
-      </div>
-
-      {/* Label */}
-      <div className="text-lg font-semibold mb-1">
-        {stat.label}
-      </div>
-
-      {/* Description */}
-      <div className="text-xs text-white/70 leading-tight">
-        {stat.description}
-      </div>
-    </div>
-  ))}
-</div>
         {/* Bottom Accent */}
         <div className="text-center mt-8">
           <div className="inline-flex items-center gap-2 text-sm text-white/60">
             <div className="w-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-            
+
             <span>Powering a better shopping experience</span>
             <div className="w-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
           </div>
