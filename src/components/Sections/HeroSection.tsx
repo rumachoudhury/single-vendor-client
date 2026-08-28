@@ -24,7 +24,7 @@ const heroSlides = [
     subtitle: "Discover Our Latest Tech Products",
     description: "EXCLUSIVE DEALS",
     // image: "https://i.imgur.com/Mjm37Wk.jpeg",
-     image: "/slider5.png",
+    image: "/slider5.png",
     cta: "Shop Now",
     badge: "Limited Time",
     link: "/products/52e87388-f119-4efd-a98f-d3be39bd6cbc",
@@ -36,16 +36,13 @@ const heroSlides = [
     description: "INNOVATION AWAITS",
     // image:
     //   "https://images.vexels.com/content/194698/preview/shop-online-slider-template-4f2c60.png",
-     image: "/slider3.png",
-     
+    image: "/slider3.png",
+
     cta: "Explore",
     badge: "Best Seller",
     link: "/products",
   },
 ];
-
-
-
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -64,7 +61,7 @@ export function HeroSection() {
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length,
     );
   };
 
@@ -139,11 +136,12 @@ export function HeroSection() {
                         //     : "bg-white/40 hover:bg-white/60"
                         // }`}
 
+                        // the active carousel dot becomes blue → purple. 💙💜
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
-  index === currentSlide
-    ? "bg-gradient-to-r from-blue-500 to-purple-600 scale-125 w-4 sm:w-6"
-    : "bg-white/40 hover:bg-white/60"
-}`}
+                          index === currentSlide
+                            ? "bg-gradient-to-r from-blue-500 to-purple-600 scale-125 w-4 sm:w-6"
+                            : "bg-white/40 hover:bg-white/60"
+                        }`}
                       />
                     ))}
                   </div>
@@ -165,7 +163,7 @@ export function HeroSection() {
                 <Link href="/products/22b1b30c-2ab5-4894-b5fd-02754ac4b27c">
                   <Image
                     // src="https://i.imgur.com/A8mLhHj.png"
-                    src= "/right-image.jpeg"
+                    src="/right-image.jpeg"
                     alt="image"
                     height={218}
                     width={444}

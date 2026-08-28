@@ -111,11 +111,20 @@ export default function SignUpPage() {
       {/* Header */}
       <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-10">
         <Link href="/" className="flex items-center space-x-2 group">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          {/* <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
             <span className="text-primary-foreground font-bold text-lg">D</span>
-          </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          </div> */}
+
+<div className="h-9 w-9 rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                <span className="text-white font-extrabold text-xl">
+                  T
+                </span>
+              </div>
+          {/* <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           TechMart
+          </span> */}
+           <span className="font-bold text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+           TechMart
           </span>
         </Link>
         <div className="flex items-center space-x-4">
@@ -149,7 +158,7 @@ export default function SignUpPage() {
           </div>
 
           <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400  bg-clip-text text-transparent">
               Join TechMart Today!
             </h1>
             <p className="text-lg text-muted-foreground max-w-md">
@@ -173,7 +182,7 @@ export default function SignUpPage() {
         <div className="w-full max-w-md mx-auto lg:mx-0">
           <Card className="shadow-2xl border-0 bg-card/80 backdrop-blur-sm">
             <CardHeader className="text-center pb-8">
-              <div className="mx-auto w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400  rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                 <User className="h-8 w-8 text-white" />
               </div>
               <CardTitle className="text-2xl font-bold">
@@ -344,7 +353,7 @@ export default function SignUpPage() {
                   {/* Submit Button */}
                   <Button
                     type="submit"
-                    className="w-full h-12 bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 group"
+                    className="w-full h-12 bg-gradient-to-r from-blue-400 to-purple-400  hover:from-accent/90 hover:to-primary/90 group"
                     disabled={isLoading}
                   >
                     {isLoading ? (
