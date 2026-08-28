@@ -87,10 +87,13 @@ export function ChatWidget() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed bottom-20 right-6 md:bottom-8 md:right-8 z-50"
           >
+
+            {/* AI chat button */}
             <Button
               onClick={() => setIsOpen(true)}
               size="icon"
-              className="w-14 h-14 rounded-full bg-primary text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              // className="w-14 h-14 rounded-full bg-primary text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <MessageCircle className="h-6 w-6" />
             </Button>

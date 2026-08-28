@@ -203,17 +203,17 @@ export function Navbar({
             {/* Mobile Search */}
             <div className=" flex md:hidden lg:hidden w-full">
               <form onSubmit={handleSearch} className="relative w-full">
-                {/* <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> */}
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-blue-500" />
-                {/* <Input
+                <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                {/* <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-blue-500" /> */}
+                <Input
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
                   onFocus={() => setIsFocused(true)}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-8 pr-3 h-8 text-xs bg-muted/50 border-muted-foreground/20 min-w-[230px] w-full max-w-full"
-                /> */}
-                <Input
+                />
+                {/* <Input
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
@@ -221,7 +221,7 @@ export function Navbar({
                   onFocus={() => setIsFocused(true)}
                   // className="h-10 w-full rounded-lg border border-slate-300 bg-white pl-10 pr-4 text-sm font-medium text-slate-600 shadow-sm placeholder:text-slate-400 transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                   className="h-10 w-full rounded-lg border-2 border-slate-300 bg-white pl-10 pr-4 text-sm font-medium text-slate-900 shadow-md placeholder:text-slate-600 transition-all focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-                />
+                /> */}
 
                 {isFocused && debouncedTerm && (
                   <div className="absolute top-full mt-2 w-full bg-background border rounded-md shadow-lg z-[1000] max-h-80 overflow-y-auto pointer-events-auto">
@@ -271,7 +271,10 @@ export function Navbar({
                   className="text-xs sm:text-sm font-medium transition-colors hover:text-primary relative group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all group-hover:w-full"></span>
+                  {/* <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all group-hover:w-full"></span> */}
+
+                  {/* 💙💜 navigation links will have a blue → purple underline on hover */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600 transition-all group-hover:w-full"></span>
                 </Link>
               ))}
             </nav>
