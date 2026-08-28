@@ -1,59 +1,114 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle, Award, Users, Globe, Star } from "lucide-react";
+import Image from "next/image";
 
+// const features = [
+//   {
+//     icon: CheckCircle,
+//     title: "Quality Guaranteed",
+//     description: "Every product is carefully selected and tested for quality",
+//     color: "text-green-600 dark:text-green-400",
+//   },
+//   {
+//     icon: Award,
+//     title: "Award Winning",
+//     description: "Recognized as the best ecommerce platform of 2024",
+//     color: "text-yellow-600 dark:text-yellow-400",
+//   },
+//   {
+//     icon: Users,
+//     title: "Customer First",
+//     description: "Our customers are at the heart of everything we do",
+//     color: "text-blue-600 dark:text-blue-400",
+//   },
+//   {
+//     icon: Globe,
+//     title: "Global Reach",
+//     description: "Serving customers in over 50 countries worldwide",
+//     color: "text-purple-600 dark:text-purple-400",
+//   },
+// ]
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Award, Users, Globe, Star } from "lucide-react"
-import Image from "next/image"
+// const stats = [
+//   { value: "10K+", label: "Happy Customers" },
+//   { value: "5K+", label: "Products Sold" },
+//   { value: "50+", label: "Countries Served" },
+//   { value: "4+", label: "Years Experience" },
+// ]
 
 const features = [
   {
     icon: CheckCircle,
-    title: "Quality Guaranteed",
-    description: "Every product is carefully selected and tested for quality",
-    color: "text-green-600 dark:text-green-400",
+    title: "Trusted Quality",
+    description:
+      "We carefully select reliable products so you can shop with confidence.",
+    color: "text-blue-400",
   },
   {
     icon: Award,
-    title: "Award Winning",
-    description: "Recognized as the best ecommerce platform of 2024",
-    color: "text-yellow-600 dark:text-yellow-400",
+    title: "Premium Selection",
+    description:
+      "Explore modern technology and carefully chosen products at great value.",
+    color: "text-purple-400",
   },
   {
     icon: Users,
-    title: "Customer First",
-    description: "Our customers are at the heart of everything we do",
-    color: "text-blue-600 dark:text-blue-400",
+    title: "Customer Focused",
+    description:
+      "Your shopping experience matters to us, from browsing to delivery.",
+    color: "text-cyan-400",
   },
   {
     icon: Globe,
-    title: "Global Reach",
-    description: "Serving customers in over 50 countries worldwide",
-    color: "text-purple-600 dark:text-purple-400",
+    title: "Easy Shopping",
+    description:
+      "Discover products online with a simple, convenient, and secure experience.",
+    color: "text-indigo-400",
   },
-]
+];
+
+// const stats = [
+//   { value: "10K+", label: "Happy Customers" },
+//   { value: "5K+", label: "Tech Products" },
+//   { value: "100+", label: "Trusted Brands" },
+//   { value: "4.9★", label: "Customer Rating" },
+// ]
 
 const stats = [
-  { value: "10K+", label: "Happy Customers" },
-  { value: "5K+", label: "Products Sold" },
-  { value: "50+", label: "Countries Served" },
-  { value: "4+", label: "Years Experience" },
-]
+  { value: "10K+", label: "Happy Shoppers" },
+  { value: "5K+", label: "Products Available" },
+  { value: "99%", label: "Customer Satisfaction" },
+  { value: "24/7", label: "Online Support" },
+];
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-6 bg-gradient-to-br from-background to-muted/30">
+    <section
+      id="about"
+      className="py-6 bg-gradient-to-br from-background to-muted/30"
+    >
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12 animate-in slide-in-from-bottom-10 duration-1000">
-          <Badge variant="outline" className="mb-4 border-primary/20 text-primary">
+          <Badge
+            variant="outline"
+            className="mb-4 border-primary/20 text-primary"
+          >
             About TechMart
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-            Your Trusted Shopping Partner Since 2020
+            {/* Your Trusted Shopping Partner Since 2020 */}
+            Your Trusted Destination for Technology
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We started with a simple mission: to make quality products accessible to everyone. Today, we&apos;re proud to
-            serve thousands of happy customers worldwide.
+            {/* We started with a simple mission: to make quality products
+            accessible to everyone. Today, we&apos;re proud to serve thousands
+            of happy customers worldwide. */}
+            Discover quality tech products, smart devices, and everyday
+            essentials designed to make your life easier. At TechMart, we bring
+            trusted products and a simple shopping experience together in one
+            place.
           </p>
         </div>
 
@@ -64,23 +119,36 @@ export function AboutSection() {
             <Card className="bg-card/50 backdrop-blur-sm border-border dark:border-gray-400 p-0">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
+                  {/* <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
                     <Star className="h-6 w-6 text-primary-foreground" />
+                  </div> */}
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <Star className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Our Mission</h3>
-                    <p className="text-sm text-muted-foreground">Excellence in every product</p>
+                    <h3 className="font-semibold text-lg">
+                      {/* Our Mission */}
+                      Our Promise
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {/* Excellence in every product */}
+                      Technology you can trust
+                    </p>
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  Our commitment to excellence, sustainability, and customer satisfaction has made us a leader in the
-                  ecommerce space.We believe in providing not just products, but solutions that enhance your life.
+                  At TechMart, our goal is to make quality technology simple and
+                  accessible. We carefully bring together reliable products,
+                  modern devices, and great value so you can shop with
+                  confidence. From everyday essentials to the latest tech, we
+                  are here to make your shopping experience easier, smarter, and
+                  more convenient.
                 </p>
               </CardContent>
             </Card>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-3">
+            {/* <div className="grid grid-cols-2 gap-3">
               {stats.map((stat, index) => (
                 <Card
                   key={index}
@@ -88,8 +156,29 @@ export function AboutSection() {
                   style={{ animationDelay: `${(index + 2) * 150}ms` }}
                 >
                   <CardContent className="p-4 text-center">
-                    <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
-                    <div className="text-xs text-muted-foreground">{stat.label}</div>
+                    <div className="text-2xl font-bold text-primary mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {stat.label}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div> */}
+            <div className="grid grid-cols-2 gap-3">
+              {stats.map((stat, index) => (
+                <Card
+                  key={index}
+                  className="bg-slate-900/70 border-slate-700/70 hover:border-blue-500/40 transition-all duration-300 animate-in slide-in-from-bottom-10 p-0"
+                  style={{ animationDelay: `${(index + 2) * 150}ms` }}
+                >
+                  <CardContent className="p-4 text-center">
+                    <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                      {stat.value}
+                    </div>
+
+                    <div className="text-xs text-slate-400">{stat.label}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -102,7 +191,8 @@ export function AboutSection() {
               <Card className="overflow-hidden border-0 shadow-2xl p-0 ">
                 <CardContent className="p-0">
                   <Image
-                    src="https://st.depositphotos.com/1038076/4908/i/450/depositphotos_49080337-stock-photo-about-us.jpg"
+                    // src="https://st.depositphotos.com/1038076/4908/i/450/depositphotos_49080337-stock-photo-about-us.jpg"
+                    src="/about.jpeg"
                     alt="About TechMart"
                     width={400}
                     height={400}
@@ -125,7 +215,11 @@ export function AboutSection() {
 
           {/* Right Content - Features */}
           <div className="lg:col-span-1 space-y-4 animate-in slide-in-from-right-10 duration-1000 delay-700">
-            <h3 className="text-xl font-semibold mb-4 text-center lg:text-left">Why Choose Us?</h3>
+            <h3 className="text-xl font-semibold mb-4 text-center lg:text-left">
+              {/* Why Choose Us? */}
+                Why Shop With TechMart?
+            </h3>
+           
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -134,14 +228,18 @@ export function AboutSection() {
               >
                 <CardContent className="p-4">
                   <div className="flex items-start gap-3">
-                    <div className={`p-2 rounded-lg bg-muted group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`p-2 rounded-lg bg-muted group-hover:scale-110 transition-transform duration-300`}
+                    >
                       <feature.icon className={`h-5 w-5 ${feature.color}`} />
                     </div>
                     <div className="flex-1">
                       <h4 className="font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
                         {feature.title}
                       </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{feature.description}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -168,5 +266,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

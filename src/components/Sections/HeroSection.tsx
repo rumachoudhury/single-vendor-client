@@ -12,7 +12,8 @@ const heroSlides = [
     title: "STARLINK UPCOMING",
     subtitle: "Order From Our Website or Physical Store",
     description: "TAKING PRE-ORDER",
-    image: "https://i.imgur.com/H2A438s.jpeg",
+    // image: "https://i.imgur.com/H2A438s.jpeg",
+    image: "/slider4.png",
     cta: "Pre-Order Now",
     badge: "New Launch",
     link: "/products/0ab0c15e-e59e-4fb1-8ae2-125dc9632a0c",
@@ -22,7 +23,8 @@ const heroSlides = [
     title: "PREMIUM COLLECTION",
     subtitle: "Discover Our Latest Tech Products",
     description: "EXCLUSIVE DEALS",
-    image: "https://i.imgur.com/Mjm37Wk.jpeg",
+    // image: "https://i.imgur.com/Mjm37Wk.jpeg",
+     image: "/slider5.png",
     cta: "Shop Now",
     badge: "Limited Time",
     link: "/products/52e87388-f119-4efd-a98f-d3be39bd6cbc",
@@ -32,13 +34,18 @@ const heroSlides = [
     title: "SMART DEVICES",
     subtitle: "Transform Your Digital Lifestyle",
     description: "INNOVATION AWAITS",
-    image:
-      "https://images.vexels.com/content/194698/preview/shop-online-slider-template-4f2c60.png",
+    // image:
+    //   "https://images.vexels.com/content/194698/preview/shop-online-slider-template-4f2c60.png",
+     image: "/slider3.png",
+     
     cta: "Explore",
     badge: "Best Seller",
     link: "/products",
   },
 ];
+
+
+
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -151,7 +158,8 @@ export function HeroSection() {
               <div className="flex items-center justify-between mb-4 rounded-2xl">
                 <Link href="/products/22b1b30c-2ab5-4894-b5fd-02754ac4b27c">
                   <Image
-                    src="https://i.imgur.com/A8mLhHj.png"
+                    // src="https://i.imgur.com/A8mLhHj.png"
+                    src= "/right-image.jpeg"
                     alt="image"
                     height={218}
                     width={444}
