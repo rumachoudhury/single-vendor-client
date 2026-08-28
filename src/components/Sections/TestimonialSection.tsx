@@ -316,8 +316,8 @@ export function TestimonialsSection() {
                       </div> */}
 
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center">
-  <Smile className="h-6 w-6 text-blue-500 group-hover:text-purple-500 transition-colors duration-300" />
-</div>
+                        <Smile className="h-6 w-6 text-blue-500 group-hover:text-purple-500 transition-colors duration-300" />
+                      </div>
 
                       {/* Rating */}
                       <div className="flex items-center space-x-1 mb-4">
@@ -398,8 +398,8 @@ export function TestimonialsSection() {
                 //   : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
 
                 index === actualIndex
-  ? "bg-gradient-to-r from-blue-500 to-purple-600 scale-125 w-8"
-  : "bg-slate-600 hover:bg-slate-500"
+                  ? "bg-gradient-to-r from-blue-500 to-purple-600 scale-125 w-8"
+                  : "bg-slate-600 hover:bg-slate-500"
               }`}
             />
           ))}
@@ -409,7 +409,7 @@ export function TestimonialsSection() {
         <div className="text-center mt-4 animate-in slide-in-from-bottom-10 duration-1000 delay-1000">
           <p className="text-muted-foreground mb-2">
             {/* Join thousands of satisfied customers */}
-              Join thousands of happy TechMart customers
+            Join thousands of happy TechMart customers
           </p>
           <div className="flex items-center justify-center space-x-1">
             {[...Array(5)].map((_, i) => (
@@ -420,7 +420,7 @@ export function TestimonialsSection() {
             ))}
             <span className="ml-2 font-semibold">
               {/* 4.9/5 from 10,000+ reviews */}
-                4.9/5 from 10,000+ customer reviews
+              4.9/5 from 10,000+ customer reviews
             </span>
           </div>
         </div>
