@@ -114,9 +114,9 @@ export function Navbar({
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
-    { name: "Categories", href: "#category" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Categories", href: "/#category" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const handleSearch = (e: React.FormEvent) => {
