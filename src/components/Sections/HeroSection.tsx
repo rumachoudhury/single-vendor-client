@@ -133,11 +133,17 @@ export function HeroSection() {
                       <button
                         key={index}
                         onClick={() => goToSlide(index)}
+                        // className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        //   index === currentSlide
+                        //     ? "bg-gradient-to-r from-primary to-accent scale-125 w-4 sm:w-6"
+                        //     : "bg-white/40 hover:bg-white/60"
+                        // }`}
+
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          index === currentSlide
-                            ? "bg-gradient-to-r from-primary to-accent scale-125 w-4 sm:w-6"
-                            : "bg-white/40 hover:bg-white/60"
-                        }`}
+  index === currentSlide
+    ? "bg-gradient-to-r from-blue-500 to-purple-600 scale-125 w-4 sm:w-6"
+    : "bg-white/40 hover:bg-white/60"
+}`}
                       />
                     ))}
                   </div>
