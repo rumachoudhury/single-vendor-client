@@ -375,7 +375,7 @@ export function StatsSection() {
         <div className="text-center mt-8">
           <div className="inline-flex items-center gap-2 text-sm text-white/60">
             <div className="w-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-            {/* <span>Trusted by customers worldwide</span> */}
+            
             <span>Powering a better shopping experience</span>
             <div className="w-8 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
           </div>
